@@ -18,8 +18,8 @@ public class TC_DWS_006_Test
 			//test=extReport.createTest("clickOnComputers");
 			hp=new HomePage(driver);
 			hp.getComputerLinks().click();
-			//Assert.assertEquals(driver.getTitle(), eUtil.getStringDatafromExcel("Books", 2, 0), "Computers page is not displayed");
-			Assert.assertNotEquals(driver.getTitle(), eUtil.getStringDatafromExcel("computers", 1, 0), "Computers page is not displayed");
+			Assert.assertEquals(driver.getTitle(), eUtil.getStringDatafromExcel("Books", 2, 0), "Computers page is not displayed");
+			//Assert.assertNotEquals(driver.getTitle(), eUtil.getStringDatafromExcel("computers", 1, 0), "Computers page is not displayed");
 			test.log(Status.PASS, "Computer page is displayed");
 			
 		}
